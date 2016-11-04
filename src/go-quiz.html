@@ -90,12 +90,12 @@ body {
 </style>
 <script src="go-quiz.js"></script>
 <script>
-window.TL=window.TL||{version:"1.0",init:function(cb){TL.send({command:"init"}
-,cb)},_c:0,_r:(document.referrer.match(/^https:\/+([\w-.]+\.)?twincl.com\//)||
-[""])[0],send:function(m,cb){var id=m._id=++TL._c;m._ver=TL.version;if(cb){var
-ln=function(m){var o=m.data;if(o&&o._id===id){r();cb(o.data)}};var r=function(
-){window.removeEventListener("message",ln)};window.addEventListener("message",
-ln);setTimeout(r,3e4)}window.parent.postMessage(m,TL._r)}};
+window.RICH=window.RICH||{version:"1",origin:"*",_c:0,init:function(cb){RICH.
+send({command:"init"},cb)},send:function(m,cb){var id=m._id=++RICH._c; m._ver
+=RICH.version;if(cb){var ln=function(m){var o=m.data;if(o&&o._id===id){r();cb
+(o.data)}};var r=function(){window.removeEventListener("message",ln)};window.
+addEventListener("message",ln);setTimeout(r,3e4)}window.parent.postMessage(m,
+RICH.origin)}};
 </script>
 </head>
 <body>

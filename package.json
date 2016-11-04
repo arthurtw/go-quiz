@@ -1,7 +1,7 @@
 {
   "name": "go-quiz",
   "version": "1.0.0",
-  "description": "Go game quiz: A Twincl plugin",
+  "description": "RICH player: Go game quiz",
   "main": "index.js",
   "scripts": {
     "build": "./src/build.sh",

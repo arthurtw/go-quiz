@@ -3,7 +3,7 @@
  * MIT License
  *
  * Go Game Quiz
- * A Twincl plugin for twinclet-go-quiz
+ * RICH Player: go-quiz
  */
 
 class GoGame {
@@ -19,7 +19,7 @@ class GoGame {
     this.maximized = false;
     this.delayResize = true;
 
-    TL.init(result => {
+    RICH.init(result => {
       this.lastMark = null;
       this.freezing = false;
       this.attempt = 0;
@@ -78,7 +78,7 @@ class GoGame {
     this.elem.panel.style.cssText = this.landscape ? `height: ${height - 5}px` : `width: ${this.width}px`;
     this.elem.comment.style.cssText = this.landscape ? `height: ${height - 125}px` : `width: ${this.width - 150}px`;
     this.lastUpdateBoard = +new Date;
-    if (this.board) TL.send({command: 'screen', height: document.body.firstElementChild.scrollHeight});
+    if (this.board) RICH.send({command: 'screen', height: document.body.firstElementChild.scrollHeight});
   }
 
   updatePanel() {
@@ -225,7 +225,7 @@ class GoGame {
   toggleFullScreen() {
     this.maximized = !this.maximized;
     this.delayResize = false;
-    TL.send({command: 'screen', state: this.maximized ? 'full' : 'normal'});
+    RICH.send({command: 'screen', state: this.maximized ? 'full' : 'normal'});
   }
 
   onKeyUp(e) {
